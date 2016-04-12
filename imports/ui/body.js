@@ -9,10 +9,11 @@ import  { ReactiveDict } from "meteor/reactive-dict";
 import { Tasks } from "../api/tasks";
 
 import "./body.html";
-import "./task/task";
+import "./task";
 
 Template.body.onCreated(function bodyOnCreated() {
-   this.state = new ReactiveDict();
+    this.state = new ReactiveDict();
+    Meteor.subscribe('tasks');
 });
 
 

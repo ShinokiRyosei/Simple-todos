@@ -1,0 +1,8 @@
+<template name="task">
+    <li class="{{#if checked}}checked{{/if}}">
+        <input type="checkbox" title="check" checked="{{ checked }}" class="toggle-checked">
+        <span class="text">
+            <strong>{{username}}</strong> - {{text}}
+        </span>
+    </li>
+</template>
